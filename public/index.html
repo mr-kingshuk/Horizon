@@ -30,7 +30,7 @@
   <link rel="stylesheet" href="assets/css/gamenight.css">
   <link rel="stylesheet" href="assets/css/speakers.css">
   <link rel="stylesheet" href="assets/css/power-ups.css">
-  <link rel="stylesheet" href="assets/css/leaderboard.css">
+  <link rel="stylesheet" href="assets/css/final-standing.css">
   <link rel="stylesheet" href="assets/css/rules-regulation.css">
   <link rel="stylesheet" href="assets/css/game-jam.css">
   <link rel="stylesheet" href="assets/css/button.css">
@@ -42,9 +42,17 @@
   <title>Horizon</title>
 </head>
 
-<body>
+<body onload="preload()">
+
+  <div class="preloader">
+    <div class="bg">
+      <div class="expand"></div>
+    </div>
+    <img src="assets/img/EVENT-LOGO.png" alt="">
+  </div>
 
   <main>
+
     <div class="outer-nav ">
       <nav class="navbar">
         <div class="hamburger">
@@ -78,8 +86,7 @@
             <a data-switcher data-tab="8">Workshops</a>
           </li>
           <li class="tab op-credits">
-            <a target ="_blank" 
-            href="https://www.youtube.com/">Credits</a>
+            <a target="_blank" href="https://horizon-gdsc-credits-page.netlify.app/">Credits</a>
           </li>
         </ul>
         <ul class="outer-options">
@@ -480,77 +487,118 @@
             <img src="assets/img/help.png" alt="">
           </div>
           <h3 class="heading"> Mentor Madad </h3>
-          <div class="inner">By using this a team can gain access to the help from a mentor who will be assigned by the organising committee of the hackathon .They can use this opportunity to improve their solution and presentation by getting tips provided by the mentor.</div>
+          <div class="inner">By using this a team can gain access to the help from a mentor who will be assigned by the
+            organising committee of the hackathon .They can use this opportunity to improve their solution and
+            presentation by getting tips provided by the mentor.</div>
         </div>
         <div class='item'>
           <div class="logo">
             <img src="assets/img/double_dip.png" alt="">
           </div>
           <h3 class="heading"> Double Dip </h3>
-          <div class="inner">By using this a team can gain access to the opportunity of getting their project evaluated a second time, provided they inform or use their Lifeline at least three hour before the next evaluation .(only applicable to Day 1 , Day2 evaluations)</div>
+          <div class="inner">By using this a team can gain access to the opportunity of getting their project evaluated
+            a second time, provided they inform or use their Lifeline at least three hour before the next evaluation
+            .(only applicable to Day 1 , Day2 evaluations)</div>
         </div>
       </div>
     </section>
 
-    <section class="page leaderboard" data-page="4">
-      <div class='size'>
-
-
-        <h1 id='tabhead'> <span style="color:#FF0000">L</span>EADERBOARD</h1>
-        <div class="table">
-          <!-- <div class='glass'>
-            <h1 id='tabhead2' class='com_soon'> <span style="color:#FF0000">C</span>OMING &nbsp;<span
-                style="color:#FF0000">S</span>OON</h1>
-          </div> -->
-          <div class="row">
-            <div class='rowitem' id='num'>1 </div>
-            <div class='rowitem'>Team Name </div>
-            <div class='rowitem'> Scores</div>
-            <div class='rowitem'>Powerups </div>
-          </div>
-          <div class="row">
-            <div class='rowitem' id='num'>2 </div>
-            <div class='rowitem'>Team Name </div>
-            <div class='rowitem'> Scores</div>
-            <div class='rowitem'>Powerups </div>
-          </div>
-          <div class="row">
-            <div class='rowitem' id='num'>3 </div>
-            <div class='rowitem'>Team Name </div>
-            <div class='rowitem'> Scores</div>
-            <div class='rowitem'>Powerups </div>
-          </div>
-          <div class="row">
-            <div class='rowitem' id='num'>4 </div>
-            <div class='rowitem'>Team Name </div>
-            <div class='rowitem'> Scores</div>
-            <div class='rowitem'>Powerups </div>
-          </div>
-          <div class="row">
-            <div class='rowitem' id='num'>5 </div>
-            <div class='rowitem'>Team Name </div>
-            <div class='rowitem'> Scores</div>
-            <div class='rowitem'>Powerups </div>
-          </div>
-          <div class="row">
-            <div class='rowitem' id='num'>6 </div>
-            <div class='rowitem'>Team Name </div>
-            <div class='rowitem'> Scores</div>
-            <div class='rowitem'>Powerups </div>
-          </div>
-          <div class="row">
-            <div class='rowitem' id='num'>7 </div>
-            <div class='rowitem'>Team Name </div>
-            <div class='rowitem'> Scores</div>
-            <div class='rowitem'>Powerups </div>
-          </div>
-          <div class="row">
-            <div class='rowitem' id='num'>8 </div>
-            <div class='rowitem'>Team Name </div>
-            <div class='rowitem'> Scores</div>
-            <div class='rowitem'>Powerups </div>
-          </div>
-
+    <section class="page final-standing" data-page="4">
+      <h1 class="head standing-heading"> <span class="ru">F</span>inal <span class="ru">S</span>tandings </h1>
+      <div class=" standing-content">
+        <div class="winner-subsection hackathon-winners">
+          <h2 class="head standing-subhead"> <span class="ru">H</span>ackathon</h2>
+          <table>
+            <thead>
+              <tr>
+                <th class="col1">Position</th>
+                <th>Team Name</th>
+                <th>Problem Statement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col1">1st</td>
+                <td>Slytherin</td>
+                <td>Vaidhya Raj</td>
+              </tr>
+              <tr>
+                <td class="col1">2nd</td>
+                <td>Light</td>
+                <td>Risk Management</td>
+              </tr>
+              <tr>
+                <td class="col1">3rd</td>
+                <td>Gully_Coders();</td>
+                <td>Crime Investigation Portal</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="winner-subsection game-night-winners">
+          <h2 class="head standing-subhead"> <span class="ru">G</span>ame <span class="ru">N</span>ight</h2>
+          <table>
+            <thead>
+              <tr>
+                <th class="col1">Position</th>
+                <th>Team Name</th>
+                <th>Team Lead IGL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col1">1st</td>
+                <td>No Dardi Launde</td>
+                <td class="col3">AzaZel2OP#3760</td>
+              </tr>
+              <tr>
+                <td class="col1">2nd</td>
+                <td>Run & Gun</td>
+                <td class="col3">xxCLUTCHGODDxx#AJ69X</td>
+              </tr>
+              <tr>
+                <td class="col1">3rd</td>
+                <td>Heart Breakers</td>
+                <td class="col3">badboy#6783</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="winner-subsection game-jam-winners">
+          <h2 class="head standing-subhead"> <span class="ru">G</span>ame <span class="ru">J</span>am</h2>
+          <table>
+            <thead>
+              <tr>
+                <th class="col1">Position</th>
+                <th>Game</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col1">Winner</td>
+                <td>Full System Reset</td>
+              </tr>
+              <tr>
+                <td class="col1" rowspan="6">Special Mention</td>
+                <td>Ok</td>
+              </tr>
+              <tr>
+                <td>Droplet</td>
+              </tr>
+              <tr>
+                <td>Codescape</td>
+              </tr>
+              <tr>
+                <td>Gizmo Rabbit</td>
+              </tr>
+              <tr>
+                <td>Gizmo Rabbit</td>
+              </tr>
+              <tr>
+                <td>There is a game in your bug</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -994,7 +1042,8 @@
                 <div class="main-heading">Introduction to ML</div>
 
                 <div class="sub-heading">2:00PM ~ 3:00PM <br> 11th February, 2022</div>
-                <button class="btn"><a target="_blank" href="https://www.youtube.com/watch?v=N0DvH5kUOrE">WATCH</a></button>
+                <button class="btn"><a target="_blank"
+                    href="https://www.youtube.com/watch?v=N0DvH5kUOrE">WATCH</a></button>
               </div>
               <div class="speaker-card">
                 <div class="profile-img">
@@ -1002,7 +1051,8 @@
                 </div>
                 <div class="main-heading">Manan Jain</div>
                 <div class="sub-heading">GDSC Data Science <br> Core Member</div>
-                <button class="btn"><a target="_blank" href="https://www.youtube.com/watch?v=N0DvH5kUOrE">WATCH</a></button>
+                <button class="btn"><a target="_blank"
+                    href="https://www.youtube.com/watch?v=N0DvH5kUOrE">WATCH</a></button>
               </div>
             </div>
           </div>
@@ -1016,7 +1066,8 @@
                 <div class="main-heading">Introduction to ML</div>
 
                 <div class="sub-heading">2:00PM ~ 3:00PM <br> 11th February, 2022</div>
-                <button class="btn"><a target="_blank" href="https://www.youtube.com/watch?v=N0DvH5kUOrE">WATCH</a></button>
+                <button class="btn"><a target="_blank"
+                    href="https://www.youtube.com/watch?v=N0DvH5kUOrE">WATCH</a></button>
               </div>
               <div class="speaker-card">
                 <div class="profile-img">
@@ -1024,7 +1075,8 @@
                 </div>
                 <div class="main-heading">Kartikey Sharma</div>
                 <div class="sub-heading">GDSC Data Science <br> Core Member</div>
-                <button class="btn"><a target="_blank" href="https://www.youtube.com/watch?v=N0DvH5kUOrE">WATCH</a></button>
+                <button class="btn"><a target="_blank"
+                    href="https://www.youtube.com/watch?v=N0DvH5kUOrE">WATCH</a></button>
               </div>
             </div>
           </div>
@@ -1161,7 +1213,8 @@
           <a href="https://discord.com/invite/KrBubQPMYd" target="_blank"> <i class="fa-brands fa-discord"></i></a>
         </div>
         <div class="footer-icons">
-          <a href="https://www.linkedin.com/company/horizongdsc/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://www.linkedin.com/company/horizongdsc/" target="_blank"><i
+              class="fa-brands fa-linkedin-in"></i></a>
         </div>
         <div class="footer-icons">
           <a href="mailto:horizon.gdsc@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>

@@ -102,8 +102,6 @@ credits.addEventListener('click', () =>
 //Function to remove open points 
 function removeVisPoint()
 {
-    
-
    // at a time only one should be visble
    const visiblePoint = document.querySelector('.visible-yes');
 
@@ -160,16 +158,29 @@ heading.forEach(header =>
         if(visiblePoint != subPointsDiv)
             subPointsDiv.classList.add('visible-yes');
 
-        //getting all the lis of sub-points Node and its length
-        const subPoints = subPointsDiv.querySelectorAll('li');
-        const numSubPoints = subPoints.length;    
-
-        //load animation for each point like in Navbar
-        subPoints.forEach((link, index) =>{
-            if(subPointsDiv.classList != 'sub-points visible-yes')
-                link.style.animation= '';
-            else    
-                link.style.animation = `subOptionsFade 0.5s ease forwards ${index/numSubPoints +0.1 }s`;
-        });
     });
 });
+
+const image = document.querySelector('.preloader img');
+
+image.addEventListener('click', ()=>{
+    const expand = document.querySelector('.preloader .expand');
+    expand.style.transform = 'scale(0)';
+});
+
+// add setTimeout
+//add display none after page load to sections
+function preload(){
+    const preloader = document.querySelector('.preloader');
+    const image = document.querySelector('.preloader img');
+    const expand = document.querySelector('.preloader .expand');
+    
+    setTimeout(()=>{
+        expand.style.opacity = '0';
+        expand.style.transform = 'scale(0)';
+        image.style.opacity = '0';
+        expand.addEventListener('transitionend', ()=>{
+        preloader.style.display = 'none';
+    });
+    }, 800);
+}   
